@@ -4,11 +4,13 @@ import { useSelector } from "react-redux";
 export const OrderConfirmationPage = () => {
   const { cart, totalQuantity, totalPrice, userName, userAddress, userEmail } =
     useSelector((state) => state.allCart);
+    const gradient = 'linear-gradient(45deg, #00ff00, #00cc00)'; // Green gradient
+
   return (
     <div>
-      <h1>Order Confirmation Page</h1>
+      <h1 className="orderConfirmationHeading">Order Confirmation Page</h1>
       <div>
-        <section className="h-100 gradient-custom">
+        <section className="h-100 gradient-green">
           <div className="container py-5">
             <div className="row d-flex justify-content-center my-4">
               <div className="col-md-8">
